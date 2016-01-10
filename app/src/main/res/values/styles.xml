@@ -17,4 +17,41 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="bluebtn" parent="@style/Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_blue</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="smileys" parent="@style/Widget.AppCompat.Button">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+
+    </style>
+
+
+    <style name="blueBackground">
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <style name="blackText">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="optionButton">
+        <item name="android:background">@drawable/btn_blue</item>
+    </style>
+
+    <style name="hideButton">
+        <item name="android:background">@drawable/btn_green</item>
+    </style>
+
+    <style name="translucide">
+        <item name="android:background">@color/translucide</item>
+    </style>
 </resources>

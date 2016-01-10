@@ -4,22 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
     tools:showIn="@layout/activity_main"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-    <EditText android:id="@+id/edit_message"
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:hint="@string/edit_message"
-        android:layout_weight="1"
-    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText android:id="@+id/edit_message"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:hint="@string/edit_message"
+            android:layout_weight="1"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:onClick="sendMessage"
+            />
+
+    </LinearLayout>
+
     <Button
+        android:id="@+id/btn_goto_dynamicButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
-    />
+        android:onClick="goToPage"
+        />
+
+    <Button
+        android:id="@+id/btn_goto_blocNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToBlocNote"
+        />
+
+    <Button
+        android:id="@+id/btn_goto_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToList"
+        />
+    <Button
+        android:id="@+id/btn_goto_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToMenu"
+        />
+
+    <Button
+        android:id="@+id/btn_goto_chess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToChess"
+        />
+
 
 </LinearLayout>

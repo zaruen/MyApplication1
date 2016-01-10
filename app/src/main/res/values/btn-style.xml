@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colors">
+        <item>#FF0000</item>
+        <item>#0FF000</item>
+        <item>#000FF0</item>
+        <item>#FFFFFF</item>
+    </array>
+
+    <declare-styleable name="ChessBoardView">
+        <!-- L'attribut d'identifiant "colorOne" est de type "color" -->
+        <attr name="colorOne" format="color"/>
+        <attr name="colorTwo" format="color"/>
+    </declare-styleable>
+</resources>

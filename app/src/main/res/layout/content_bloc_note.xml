@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.thomasneuraz.myapplication1.Slider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slider"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.thomasneuraz.myapplication1.BlocNoteActivity"
+    tools:showIn="@layout/activity_bloc_note"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toHide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/buttons">
+
+            <Button
+                style="@style/bluebtn"
+                android:id="@+id/btn_gras"
+                android:text="Gras"
+                android:onClick="onGrasClick"
+                android:background="@drawable/pressedbtn"
+                />
+            <Button
+                style="@style/bluebtn"
+                android:id="@+id/btn_italic"
+                android:text="Italique"
+                android:onClick="onItalicClick"
+                android:background="@drawable/pressedbtn"/>
+            <Button
+                style="@style/bluebtn"
+                android:id="@+id/btn_souligne"
+                android:text="Souligne"
+                android:onClick="onSouligneClick"
+                android:background="@drawable/pressedbtn"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/smileys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttons">
+
+            <ImageButton
+                android:id="@+id/smiley1"
+                style="@style/translucide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="smiley1"
+                android:padding="5dip"
+                android:src="@drawable/smiley1"
+                android:onClick="onSmiley1Click"/>
+
+            <ImageButton
+                android:id="@+id/smiley2"
+                style="@style/translucide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="smiley2"
+                android:padding="5dip"
+                android:src="@drawable/smiley2"
+                android:onClick="onSmiley2Click"/>
+
+            <ImageButton
+                android:id="@+id/smiley3"
+                style="@style/translucide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/underline"
+                android:layout_alignRight="@+id/underline"
+                android:contentDescription="smiley3"
+                android:padding="5dip"
+                android:src="@drawable/smiley3"
+                android:onClick="onSmiley3Click"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smileys">
+
+            <RadioGroup
+                android:id="@+id/colorchoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/noir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Noir"/>
+                <RadioButton
+                    android:id="@+id/blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bleu"/>
+                <RadioButton
+                    android:id="@+id/red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rouge"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/hideShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_green"
+        android:text="Cacher"
+        android:layout_gravity="center"
+        />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#090909"
+            android:layout_marginTop="20dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/edition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edition :"
+                />
+            <EditText
+                android:id="@+id/rawtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edition">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preview :"
+                />
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+</com.example.thomasneuraz.myapplication1.Slider>
