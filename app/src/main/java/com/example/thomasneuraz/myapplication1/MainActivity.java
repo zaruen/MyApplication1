@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         Button buttonToChess = (Button)findViewById(R.id.btn_goto_menu);
         buttonToChess.setText(resource.getString(R.string.btn_page, "ChessBoard"));
 
+        Button buttonToIntents = (Button)findViewById(R.id.btn_goto_intents);
+        buttonToIntents.setText(resource.getString(R.string.btn_page, "My Intents"));
+
         // Initialize member TextView so we can manipulate it later
         //mTextView = (TextView) findViewById(R.id.text_message);
 
@@ -193,6 +196,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToChess(View view){
         Intent intent = new Intent(this, ChessBoardActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToIntents(View view){
+        Intent intent = new Intent(this, MyIntentsActivity.class);
         startActivity(intent);
     }
 }
